@@ -1,10 +1,15 @@
 import React from 'react'
+import {Button, Table, TableHead, TableBody, TableRow, TableCell} from '@material-ui/core';
+import {CustomTable} from './Table'
 
 const Import = (props) => {
     // fill out this component
 
     return (
-        <p>Import Component</p>
+        <>
+        <Button variant='contained' color='primary'>Import</Button>
+        <CustomTable/>
+        </>
     )
 }
 

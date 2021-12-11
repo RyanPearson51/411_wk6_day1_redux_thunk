@@ -15,8 +15,10 @@ const cars = (state = [], action) => {
     }
 }
 
-const makes = (state = [], action) => {
-    switch(action.type) {
+const makes = (state = [], {type,value}) => {
+    switch(type) {
+        case 'FETCH_MAKES':
+            return value
         default:
             return state
     }
