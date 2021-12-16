@@ -3,13 +3,17 @@ import {Button, Table, TableHead, TableBody, TableRow, TableCell} from '@materia
 import {CustomTable} from './Table'
 
 const Import = (props) => {
-    // fill out this component
-
     return (
-        <>
-        <Button variant='contained' color='primary'>Import</Button>
-        <CustomTable/>
-        </>
+        < div >
+            <Button onClick={() => props.fetchMakes()} color="primary" variant="contained">
+                Import
+            </Button>
+            <h2>
+                Number of cars: {props.makes.length}
+            </h2>
+            <CustomTable deleteMake={props.deleteMake} makes={props.makes}>
+            </CustomTable>
+        </div >
     )
 }
 

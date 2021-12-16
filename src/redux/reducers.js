@@ -19,6 +19,10 @@ const makes = (state = [], {type,value}) => {
     switch(type) {
         case 'FETCH_MAKES':
             return value
+        case 'DELETE_MAKE':
+            let newState=[...state]
+            newState.splice(value, 1)
+            return newState
         default:
             return state
     }
